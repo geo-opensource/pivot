@@ -1,0 +1,13 @@
+@import '../../imports';
+
+.time-axis {
+  line {
+    stroke: $gray;
+  }
+
+  text {
+    text-anchor: middle;
+    font-size: 12px;
+    fill: $text-medium;
+  }
+}

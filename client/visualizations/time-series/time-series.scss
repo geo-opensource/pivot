@@ -1,0 +1,26 @@
+@import '../../imports';
+
+$h-padding: 10px;
+
+.time-series {
+  display: inline-block;
+  padding-left: $h-padding;
+  overflow: hidden;
+
+  .measure-graphs {
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    .measure-graph {
+      border-bottom: 1px solid $gray;
+    }
+  }
+
+  .highlighter {
+    position: absolute;
+    top: 0;
+    left: $h-padding;
+    right: $h-padding;
+    bottom: 0;
+  }
+}

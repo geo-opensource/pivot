@@ -1,0 +1,74 @@
+@import '../../imports';
+
+$icon-width: 35px;
+
+.dimension-list-tile {
+  @extend %module;
+  @extend %module-title;
+
+  .items {
+    position: absolute;
+    top: $title-height;
+    bottom: 0;
+    width: 100%;
+    overflow: auto;
+    color: $text-standard;
+    transition: height 0.1s ease-in-out;
+
+    .dimension {
+      @include pin-top(30px);
+
+      background: $white;
+      cursor: pointer;
+      overflow: hidden;
+      transition: transform 0.1s ease-in-out;
+
+      &.selected {
+        background: darken($hover, 7%);
+      }
+
+      .icon {
+        @include pin-left($icon-width);
+        cursor: ns-resize;
+
+        svg {
+          position: absolute;
+          left: $tile-padding-h;
+
+          path {
+            fill: hsla(0, 0, 0, 0.35);
+          }
+        }
+      }
+
+      &.type-string .icon svg {
+        top: 11px;
+        width: 17px;
+      }
+
+      &.type-time .icon svg {
+        top: 7px;
+        margin-left: 1px;
+        width: 15px;
+      }
+
+      &.type-string-geo .icon svg {
+        top: 7px;
+        margin-left: 1px;
+        width: 15px;
+      }
+
+      .item-title {
+        position: absolute;
+        top: 8px;
+        left: $icon-width;
+      }
+    }
+  }
+
+  &.no-drag {
+    .dimension:hover {
+      background: $hover;
+    }
+  }
+}

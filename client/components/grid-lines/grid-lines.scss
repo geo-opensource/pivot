@@ -1,0 +1,8 @@
+@import '../../imports';
+
+.grid-lines {
+  line {
+    pointer-events: none;
+    stroke: $grid-line-color;
+  }
+}

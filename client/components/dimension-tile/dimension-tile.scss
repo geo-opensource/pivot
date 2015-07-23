@@ -1,0 +1,79 @@
+@import '../../imports';
+
+$checkbox-width: 20px;
+$measure-width: 80px;
+
+.dimension-tile {
+  @extend %module;
+  user-select: none;
+  min-height: 94px;
+
+  .search-box {
+    position: absolute;
+    top: $pin-title-height;
+    left: 0;
+    right: 0;
+    height: $search-box-height;
+    padding: 0 $tile-padding-h;
+
+    input {
+      border: 1px solid $border-light;
+      width: 100%;
+      height: 23px;
+    }
+  }
+
+  .rows {
+    position: absolute;
+    top: $pin-title-height;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    overflow: auto;
+  }
+
+  &.with-search .rows {
+    top: $pin-title-height + $search-box-height;
+  }
+
+  .row {
+    height: $pin-item-height;
+
+    &:hover {
+      background: $hover;
+    }
+  }
+
+  .segment-value {
+    @include unpin-right($measure-width);
+
+    left: $tile-padding-h;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+
+    .checkbox {
+
+    }
+
+    .label {
+      display: inline-block;
+      vertical-align: top;
+      padding-top: 5px;
+    }
+  }
+
+  .measure-value {
+    @include pin-right($measure-width);
+
+    text-align: right;
+    padding-top: 5px;
+    padding-right: $tile-padding-h;
+    white-space: nowrap;
+  }
+
+  .loader {
+    @include pin-full;
+  }
+}

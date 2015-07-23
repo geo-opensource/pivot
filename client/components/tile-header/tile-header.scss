@@ -1,0 +1,25 @@
+@import '../../imports';
+
+.tile-header {
+  padding: 5px 0 0 $tile-padding-h;
+
+  .title {
+    margin-top: 7px;
+    font-size: 13px;
+    color: $text-light;
+  }
+
+  .search {
+    position: absolute;
+    top: 11px;
+    right: 30px;
+    cursor: pointer;
+  }
+
+  .close {
+    position: absolute;
+    top: 11px;
+    right: $tile-padding-h;
+    cursor: pointer;
+  }
+}

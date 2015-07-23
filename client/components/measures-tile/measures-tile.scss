@@ -1,0 +1,38 @@
+@import '../../imports';
+
+.measures-tile {
+  @extend %module;
+  @extend %module-title;
+
+  .rows {
+    position: absolute;
+    top: $pin-title-height;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    overflow: auto;
+  }
+
+  .row {
+    margin-left: $tile-padding-h;
+    height: $pin-item-height;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+
+    .label {
+      display: inline-block;
+      vertical-align: top;
+      padding-top: 5px;
+    }
+
+    &:hover {
+      background: $hover;
+    }
+  }
+
+  .checkbox {
+    margin-top: 1px;
+  }
+}

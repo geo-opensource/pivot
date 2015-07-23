@@ -1,0 +1,35 @@
+@import '../../imports';
+
+$action-padding: 20px;
+$icon-size: 30px;
+
+.drop-indicator {
+  .white-out {
+    @include pin-full;
+    background: $white;
+    opacity: .65;
+  }
+
+  .action {
+    position: absolute;
+    top: $action-padding;
+    bottom: $action-padding;
+    left: $action-padding;
+    right: $action-padding;
+    border-radius: 10px;
+    border: 1px dashed $text-medium;
+
+    svg {
+      position: absolute;
+      width: $icon-size;
+      top: 50%;
+      left: 50%;
+      margin-left: -$icon-size / 2;
+      margin-top: -$icon-size / 2;
+    }
+
+    path {
+      fill: $text-medium;
+    }
+  }
+}

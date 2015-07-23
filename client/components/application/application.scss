@@ -1,0 +1,93 @@
+@import '../../imports';
+
+.application {
+  overflow: hidden;
+  background: $background-base;
+
+  .header-bar {
+    @include pin-top($header-height);
+    z-index: 11;
+  }
+
+  .container {
+    @include unpin-top($header-height);
+
+    .dimension-measure-panel {
+      @include pin-left($left-panel-width);
+
+      padding: $tile-margin-v $tile-margin-h;
+      display: flex;
+      flex-direction: column;
+
+      .dimension-list-tile {
+        flex: 1;
+        margin-bottom: $tile-margin-v;
+      }
+
+      .measures-tile {
+        flex: 1;
+      }
+    }
+
+    .center-panel {
+      position: absolute;
+      top: 10px;
+      bottom: 10px;
+      left: $left-panel-width;
+      right: $pinboard-width;
+
+      .center-top-bar {
+        @include pin-top($control-tile-height + 4 + $control-tile-height);
+
+        .filter-split-section {
+          @include unpin-right($vis-selector-width + 4);
+        }
+
+        .filter-tile,
+        .split-tile {
+          height: $control-tile-height;
+        }
+
+        .filter-tile {
+          margin-bottom: 4px;
+        }
+
+        .vis-selector {
+          @include pin-right($vis-selector-width);
+          z-index: 8;
+        }
+      }
+
+      .center-main {
+        @include unpin-top($control-tile-height + 4 + $control-tile-height + 10);
+
+        .visualization {
+          @extend %module;
+          @include pin-full;
+
+          .time-series,
+          .nested-table {
+            @include pin-full;
+          }
+        }
+
+        .drop-indicator {
+          @include pin-full;
+          z-index: 9;
+        }
+      }
+    }
+
+    .pinboard-panel {
+      @include pin-right($pinboard-width);
+    }
+  }
+
+  .side-drawer-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 20;
+  }
+}

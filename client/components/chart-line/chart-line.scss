@@ -1,0 +1,17 @@
+@import '../../imports';
+
+.chart-line {
+  pointer-events: none;
+
+  .line {
+    fill: none;
+    stroke: $main-time-line;
+    stroke-width: 1.6px;
+  }
+
+  .area {
+    stroke: none;
+    fill: $main-time-area;
+    fill-opacity: .9;
+  }
+}
