@@ -14,15 +14,8 @@
  * limitations under the License.
  */
 
-// This needs to be required, otherwise React doesn't play nice with jsdom...
-var ExecutionEnvironment = require('../../../../node_modules/fbjs/lib/ExecutionEnvironment');
-ExecutionEnvironment.canUseDOM = true;
-
-import './jsdom-setup';
-import './require-extensions';
-
-import '../../../common/utils/test-utils/index';
-
-export * from './mock-require-ensure';
-export * from './mock-react-component';
-export * from './find-dom-node';
+var { WallTime } = require('chronoshift');
+if (!WallTime.rules) {
+  var tzData = require("chronoshift/lib/walltime/walltime-data.js");
+  WallTime.init(tzData.rules, tzData.zones);
+}
