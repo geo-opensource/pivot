@@ -426,7 +426,10 @@ export class SettingsManager {
     var clusterName = dataCube.clusterName;
     if (clusterName === 'native') {
       return Q.fcall(() => {
-        throw new Error('no support yet');
+        var fileManager = this.getFileManagerFor(dataCube.source);
+        if (!fileManager) throw new Error(`no file manager for ${dataCube.source}`);
+        var context: any = { temp: fileManager.dataset };
+        return $('temp').limit(PREVIEW_LIMIT).compute(context) as any;
       });
     } else {
       return Q.fcall(() => {

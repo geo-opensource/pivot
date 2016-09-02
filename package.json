@@ -17,7 +17,7 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "http://github.com/implydata/pivot.git"
+    "url": "http://github.com/implydata/imply-pivot.git"
   },
   "bin": {
     "pivot": "bin/pivot"
