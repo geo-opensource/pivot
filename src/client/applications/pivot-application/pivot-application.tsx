@@ -215,6 +215,7 @@ export class PivotApplication extends React.Component<PivotApplicationProps, Piv
 
   hashToState(hash: string) {
     const { dataCubes, collections } = this.state.appSettings;
+
     var viewType = this.getViewTypeFromHash(hash);
     var viewHash = this.getViewHashFromHash(hash);
     var newState: PivotApplicationState = {
@@ -222,6 +223,10 @@ export class PivotApplication extends React.Component<PivotApplicationProps, Piv
       viewHash,
       drawerOpen: false
     };
+
+    if (viewType === COLLECTION) {
+      newState.cubeViewSupervisor = null;
+    }
 
     if (this.viewTypeNeedsAnItem(viewType)) {
       let items = viewType === CUBE ? dataCubes : collections;

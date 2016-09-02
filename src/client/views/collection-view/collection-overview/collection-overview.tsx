@@ -84,11 +84,6 @@ export class CollectionOverview extends React.Component<CollectionOverviewProps,
     var newDropIndex = targetIndex;
     var shouldDropAfter = this.shouldDropAfter(e);
 
-    // Same tile
-    if (newDropIndex === sourceIndex) {
-      newDropIndex = -1;
-    }
-
     if (newDropIndex !== dropIndex || shouldDropAfter !== dropAfter) {
       this.setState({
         dropIndex: newDropIndex,
