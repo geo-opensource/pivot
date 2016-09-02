@@ -134,24 +134,21 @@ Running `gulp watch` will build the project and start all the automated watchers
 
 **Recent improvements:**
 
+- Collections
+- String / RegExp filters
 - Exclusion filters
 - Full support of Druid 0.9.1
 - Pivot can connect to multiple clusters, also Postgres and MySQL
 - Continuous dimension filtering and splitting
 - Support for Druid Theta sketches (for countDistinct())
 - Horizontal bars in Table
-- Side panel resizing
-- Ability to define custom granularities for bucketing
-- Timezone support
 
 For a full list of changes see our [CHANGELOG](CHANGELOG.md)
 
 **We will be working on:**
 
 - Additional visualizations (geo, heatmap)
-- String / RegExp filters
 - Removing strict limits on queries
-- Bookmarks and dashboarding features
 - Various additions, improvements and fixes to make the app more complete
 
 ## Questions & Support
