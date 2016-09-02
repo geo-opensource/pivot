@@ -1,11 +1,11 @@
-# Pivot
+# Imply Pivot
 
-Pivot is a web-based exploratory visualization UI for [Druid](https://github.com/druid-io/druid) built on top of 
-[Plywood](https://github.com/implydata/plywood). 
+Pivot is a web-based exploratory visualization UI for [Druid](https://github.com/druid-io/druid) built on top of
+[Plywood](https://github.com/implydata/plywood).
 
 Pivot is best used with the [Imply Analytics Platform](http://imply.io/product)
 which can be downloaded from [imply.io/download](http://imply.io/download) and comes with the stable version of Pivot.
-Alternatively nightly standalone Pivot versions can be installed through npm. 
+Alternatively nightly standalone Pivot versions can be installed through npm.
 
 The project is currently undergoing rapid development.
 Internal and external APIs may change with little notice.
@@ -14,15 +14,15 @@ Internal and external APIs may change with little notice.
 
 **Drag-and-drop UI**
 
-![Drag to Split](https://github.com/implydata/pivot/raw/master/docs/images/drag-and-drop.gif)
+![Drag to Split](https://github.com/implydata/imply-pivot/raw/master/docs/images/drag-and-drop.gif)
 
 **Contextual exploration**
 
-![Time Highlight](https://github.com/implydata/pivot/raw/master/docs/images/explore.gif)
+![Time Highlight](https://github.com/implydata/imply-pivot/raw/master/docs/images/explore.gif)
 
 **Comparisons**
 
-![Time Highlight](https://github.com/implydata/pivot/raw/master/docs/images/compare.gif)
+![Time Highlight](https://github.com/implydata/imply-pivot/raw/master/docs/images/compare.gif)
 
 ## Usage
 
@@ -66,30 +66,30 @@ Pivot will automatically introspect your Druid cluster and figure out your dimen
 
 **Note:** if Pivot starts up and gives you a query error it is most likely because it could not properly introspect your schema.
 You probably have some *hyperUnique* column that Pivot is trying to SUM over.
-You will have to provide Pivot with a config file as in the nest section.   
+You will have to provide Pivot with a config file as in the nest section.
 
 ### Create a config
 
 In general Pivot will never know your schema as well as you.
-To get a better experience you should create a [config](https://github.com/implydata/pivot/blob/master/docs/configuration.md) and provide it to Pivot.
+To get a better experience you should create a [config](https://github.com/implydata/imply-pivot/blob/master/docs/configuration.md) and provide it to Pivot.
 The fastest way to create a config is to have Pivot do it for you.
 
 ```
 pivot --druid your.druid.broker.host:8082 --print-config --with-comments > config.yaml
 ```
 
-The `--print-config` option will make Pivot run through its regular introspection and then, instead of tarting a server, dump the YAML onto the stdout and exit.  
+The `--print-config` option will make Pivot run through its regular introspection and then, instead of tarting a server, dump the YAML onto the stdout and exit.
 
 ```
 pivot --config config.yaml
 ```
 
 Now open the config in your favorite editor and adjust to taste.
-Make sure to read through the [documentation](https://github.com/implydata/pivot/blob/master/docs/configuration.md) about the possible configuration options.
+Make sure to read through the [documentation](https://github.com/implydata/imply-pivot/blob/master/docs/configuration.md) about the possible configuration options.
 
 ## Development
 
-Here are the steps to clone Pivot and run it as a developer. 
+Here are the steps to clone Pivot and run it as a developer.
 
 Firstly make sure you have the latest node (>= 5.5.x) and gulp installed:
 
@@ -157,5 +157,5 @@ For a full list of changes see our [CHANGELOG](CHANGELOG.md)
 ## Questions & Support
 
 For updates about new and upcoming features follow [@implydata](https://twitter.com/implydata) on Twitter.
-                             
+
 Please file bugs and feature requests by opening and issue on GitHub and direct all questions to our [user groups](https://groups.google.com/forum/#!forum/imply-user-group).

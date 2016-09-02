@@ -46,7 +46,7 @@ For updates follow [@implydata](https://twitter.com/implydata) on Twitter.
 
 ## 0.9.31
 
-- Fix `defaultSplits` in `dataCube` 
+- Fix `defaultSplits` in `dataCube`
 
 ## 0.9.30
 
@@ -147,12 +147,12 @@ For updates follow [@implydata](https://twitter.com/implydata) on Twitter.
 ## 0.9.9
 
 - Auto generated config links to a github tag
-- Fix config auto-generator printing out `defaultSelectedMeasures: []` 
+- Fix config auto-generator printing out `defaultSelectedMeasures: []`
 
 ## 0.9.8
 
 - Early detection of (invalid) data sources that have a measure and dimension of the same name
-- Prevention of making data sources with measures and dimensions of the same name 
+- Prevention of making data sources with measures and dimensions of the same name
 
 ## 0.9.7
 
@@ -164,7 +164,7 @@ For updates follow [@implydata](https://twitter.com/implydata) on Twitter.
 
 ## 0.9.5
 
-- Fixed display of exclusion filters 
+- Fixed display of exclusion filters
 - Ensure cluster connection prior to starting introspection
 
 ## 0.9.4
@@ -194,7 +194,7 @@ For updates follow [@implydata](https://twitter.com/implydata) on Twitter.
 - Ability to configure `serverHost`
 - Auto refresh icon rotation
 - Pivot is npm shrinkwrapped
-- Better dimension / measure panel scaling 
+- Better dimension / measure panel scaling
 
 ## 0.8.42
 
@@ -225,7 +225,7 @@ For updates follow [@implydata](https://twitter.com/implydata) on Twitter.
 
 ## 0.8.36
 
-- Misc query improvements from new Plywood 
+- Misc query improvements from new Plywood
 
 ## 0.8.35
 
@@ -247,7 +247,7 @@ For updates follow [@implydata](https://twitter.com/implydata) on Twitter.
 
 ## 0.8.31
 
-- Support and auto detection for Theta sketches (for countDistinct() only for now) 
+- Support and auto detection for Theta sketches (for countDistinct() only for now)
 
 ## 0.8.30
 
@@ -302,7 +302,7 @@ For updates follow [@implydata](https://twitter.com/implydata) on Twitter.
 ## 0.8.20
 
 - Added pre-calculation pattern to visualizations
-- Fixed bar chart on negative values 
+- Fixed bar chart on negative values
 
 ## 0.8.19
 
@@ -327,7 +327,7 @@ For updates follow [@implydata](https://twitter.com/implydata) on Twitter.
 - Export data to CSV
 - New time series bubbles with hover logic
 - Raw data modal allows you to see the raw data in the selected segment
-- Better automatic config generation for data sources with URL unsafe names 
+- Better automatic config generation for data sources with URL unsafe names
 
 ## 0.8.14
 
@@ -339,12 +339,12 @@ For updates follow [@implydata](https://twitter.com/implydata) on Twitter.
 
 ## 0.8.12
 
-- New [customization options](https://github.com/implydata/pivot/blob/master/docs/configuration.md#customization)
+- New [customization options](https://github.com/implydata/imply-pivot/blob/master/docs/configuration.md#customization)
 - Updated favicon PNGs
 
 ## 0.8.11
 
-- New Plywood fixes introspection of [JS ingestion aggregates](https://groups.google.com/forum/#!topic/imply-user-group/lC68IA79hYg) 
+- New Plywood fixes introspection of [JS ingestion aggregates](https://groups.google.com/forum/#!topic/imply-user-group/lC68IA79hYg)
 
 ## 0.8.10
 
@@ -352,7 +352,7 @@ For updates follow [@implydata](https://twitter.com/implydata) on Twitter.
 
 ## 0.8.9
 
-- New plywood fixes startup [bug](https://github.com/implydata/pivot/issues/150).
+- New plywood fixes startup bug.
 
 ## 0.8.8
 
@@ -361,7 +361,7 @@ For updates follow [@implydata](https://twitter.com/implydata) on Twitter.
 ## 0.8.7
 
 - New plywood fixes `timeFloor`, allows select sorting
-- Fixed broken travis tests being merged in 
+- Fixed broken travis tests being merged in
 
 ## 0.8.6
 
