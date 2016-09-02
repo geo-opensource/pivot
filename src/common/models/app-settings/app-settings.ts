@@ -186,6 +186,12 @@ export class AppSettings implements Instance<AppSettingsValue, AppSettingsJS> {
     return this.version;
   }
 
+  public incrementVersion(): AppSettings {
+    var value = this.valueOf();
+    value.version++;
+    return new AppSettings(value);
+  }
+
   public getCollectionsInvolvingCluster(clusterName: string): Collection[] {
     const dependantDataCubes = this.getDataCubesByCluster(clusterName);
     return this.collections.filter((collection) => {

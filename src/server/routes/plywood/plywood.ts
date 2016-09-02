@@ -60,10 +60,11 @@ router.post('/', (req: PivotRequest, res: Response) => {
   req.getFullSettings(dataCube) // later: , settingsVersion)
     .then((fullSettings) => {
       const { appSettings, executors } = fullSettings;
-      // var settingsBehind = false;
-      // if (appSettings.getVersion() < settingsVersion) {
-      //   settingsBehind = true;
-      // }
+      var settingsBehind = false;
+      console.log(appSettings.getVersion(), '?', settingsVersion);
+      if (settingsVersion < appSettings.getVersion()) {
+        settingsBehind = true;
+      }
 
       var myDataCube = appSettings.getDataCube(dataCube);
       if (!myDataCube) {
@@ -82,7 +83,7 @@ router.post('/', (req: PivotRequest, res: Response) => {
           var reply: any = {
             result: Dataset.isDataset(data) ? data.toJS() : data
           };
-          //if (settingsBehind) reply.action = 'update';
+          if (settingsBehind) reply.action = 'update';
           res.json(reply);
         },
         (e: Error) => {

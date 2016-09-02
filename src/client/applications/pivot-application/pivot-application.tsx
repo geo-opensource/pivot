@@ -24,6 +24,7 @@ import { findByName } from 'plywood';
 import { replaceHash } from '../../utils/url/url';
 import { DataCube, AppSettings, User, Collection, CollectionTile, Essence, Timekeeper, ViewSupervisor } from '../../../common/models/index';
 import { STRINGS } from '../../config/constants';
+import { MANIFESTS } from '../../../common/manifests/index';
 
 import { createFunctionSlot, FunctionSlot } from '../../utils/function-slot/function-slot';
 import { Ajax } from '../../utils/ajax/ajax';
@@ -159,7 +160,17 @@ export class PivotApplication extends React.Component<PivotApplicationProps, Piv
       return appSettings.getVersion();
     };
     Ajax.onUpdate = () => {
-      console.log('UPDATE!!');
+      Ajax.query({ method: "GET", url: 'client-settings' })
+        .then(
+          (resp) => {
+            //if (!this.mounted) return; // ToDo: this
+            this.setState({
+              appSettings: AppSettings.fromJS(resp.clientSettings, { visualizations: MANIFESTS })
+            });
+          },
+          (e: Error) => {
+          }
+        );
     };
 
     require.ensure(['clipboard'], (require) => {

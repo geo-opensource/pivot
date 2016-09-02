@@ -15,41 +15,17 @@
  */
 
 import { Router, Request, Response } from 'express';
-import { AppSettings, Collection, CollectionJS } from '../../../common/models/index';
-import { MANIFESTS } from '../../../common/manifests/index';
-
 import { PivotRequest } from '../../utils/index';
-import { VERSION, SETTINGS_MANAGER } from '../../config';
 
 var router = Router();
 
-router.post('/', (req: PivotRequest, res: Response) => {
-  var { collections } = req.body;
-
-  if (!Array.isArray(collections)) {
-    res.status(400).send({
-      error: 'bad collections',
-      message: 'not an array'
-    });
-    return;
-  }
-
+router.get('/', (req: PivotRequest, res: Response) => {
   req.getFullSettings()
     .then((fullSettings) => {
-      var { appSettings } = fullSettings;
-      var collectionContext = {
-        dataCubes: appSettings.dataCubes,
-        visualizations: MANIFESTS
-      };
-
-      return appSettings.changeCollections(collections.map((collection: CollectionJS) => {
-        return Collection.fromJS(collection, collectionContext);
-      })).incrementVersion();
-    })
-    .then((newAppSettings) => SETTINGS_MANAGER.updateSettings(newAppSettings))
-    .then(
-      () => {
-        res.send({ status: 'ok' });
+        var { appSettings } = fullSettings;
+        res.send({
+          clientSettings: appSettings.toClientSettings()
+        });
       },
       (e: Error) => {
         console.log('error:', e.message);

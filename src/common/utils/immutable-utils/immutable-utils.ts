@@ -14,8 +14,6 @@
  * limitations under the License.
  */
 
-import { firstUp } from '../string/string';
-
 export class ImmutableUtils {
   public static setProperty(instance: any, path: string, newValue: any): any {
     var bits = path.split('.');
