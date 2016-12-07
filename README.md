@@ -1,5 +1,10 @@
 # Imply Pivot
 
+**NOTE: This is an not-actively-maintained open-source copy of Pivot, which has now become a proprietary commercial product.
+For discussion on the status of the open source version, and any prior concerns, please visit: https://goo.gl/s2YbjR
+For the commercial version, please visit: https://imply.io/
+This repo is not going to be actively maintained, and exists largely as an archive. -Geobio**
+
 Pivot is a web-based exploratory visualization UI for [Druid](https://github.com/druid-io/druid) built on top of
 [Plywood](https://github.com/implydata/plywood).
 
