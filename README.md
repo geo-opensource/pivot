@@ -5,7 +5,6 @@ Pivot is a web-based exploratory visualization UI for [Druid](https://github.com
 
 Pivot is best used with the [Imply Analytics Platform](http://imply.io/product)
 which can be downloaded from [imply.io/download](http://imply.io/download) and comes with the stable version of Pivot.
-Alternatively nightly standalone Pivot versions can be installed through npm.
 
 The project is currently undergoing rapid development.
 Internal and external APIs may change with little notice.
@@ -14,15 +13,15 @@ Internal and external APIs may change with little notice.
 
 **Drag-and-drop UI**
 
-![Drag to Split](https://github.com/implydata/imply-pivot/raw/master/docs/images/drag-and-drop.gif)
+![Drag to Split](https://github.com/geobioboo/pivot/raw/master/docs/images/drag-and-drop.gif)
 
 **Contextual exploration**
 
-![Time Highlight](https://github.com/implydata/imply-pivot/raw/master/docs/images/explore.gif)
+![Time Highlight](https://github.com/geobioboo/pivot/raw/master/docs/images/explore.gif)
 
 **Comparisons**
 
-![Time Highlight](https://github.com/implydata/imply-pivot/raw/master/docs/images/compare.gif)
+![Time Highlight](https://github.com/geobioboo/pivot/raw/master/docs/images/compare.gif)
 
 ## Usage
 
@@ -71,7 +70,7 @@ You will have to provide Pivot with a config file as in the nest section.
 ### Create a config
 
 In general Pivot will never know your schema as well as you.
-To get a better experience you should create a [config](https://github.com/implydata/imply-pivot/blob/master/docs/configuration.md) and provide it to Pivot.
+To get a better experience you should create a [config](https://github.com/geobioboo/pivot/blob/master/docs/configuration.md) and provide it to Pivot.
 The fastest way to create a config is to have Pivot do it for you.
 
 ```
@@ -85,7 +84,7 @@ pivot --config config.yaml
 ```
 
 Now open the config in your favorite editor and adjust to taste.
-Make sure to read through the [documentation](https://github.com/implydata/imply-pivot/blob/master/docs/configuration.md) about the possible configuration options.
+Make sure to read through the [documentation](https://github.com/geobioboo/pivot/blob/master/docs/configuration.md) about the possible configuration options.
 
 ## Development
 
