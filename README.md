@@ -2,8 +2,11 @@
 
 **NOTE: This is an not-actively-maintained open-source copy of Pivot, which has now become a proprietary commercial product.
 For discussion on the status of the open source version, and any prior concerns, please visit: https://goo.gl/s2YbjR
-For the commercial version, please visit: https://imply.io/
-This repo is not going to be actively maintained, and exists largely as an archive. -Geobio**
+For the commercial version, please visit: https://imply.io/**
+
+**You may also be interested in opensource forks of Pivot: [Swiv](https://github.com/yahoo/swiv) and [Turnilo](https://github.com/allegro/turnilo) (forked at [here](https://github.com/geo-opensource/turnilo))**
+
+**This repo is not going to be actively maintained, and exists largely as an archive. -Geobio**
 
 Pivot is a web-based exploratory visualization UI for [Druid](https://github.com/druid-io/druid) built on top of
 [Plywood](https://github.com/implydata/plywood).
